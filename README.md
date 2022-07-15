@@ -1,3 +1,3 @@
 # FP Pieces
 
-Some functional programming style codes.
+Some functional programming style's codes.
