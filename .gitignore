@@ -1,0 +1,66 @@
+/es
+/src
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# windows replacement files
+src/style/_font_weight.scss
+script/win-installer/source/skin.zip
+script/win-installer/SetupScripts/userRole.nsh
+app.7z
+
+# hotupdate files
+[0-9].[0-9].[0-9]-[0-9].[0-9].[0-9]
+update.zip
+/update
+/changes
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+/release
+/coverage
+
+# dependencies
+/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+**/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# use yarn
+package-lock.json
+
+# store generate config
+**/store.config.json
+
+# test report
+/test/awesome
+
