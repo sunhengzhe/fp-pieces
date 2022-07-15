@@ -10,6 +10,12 @@ export function _case<K>(
   }
 }
 
+/**
+ * Used to replace `switch...case`
+ * @param _if
+ * @param _cases
+ * @returns
+ */
 export function _switch<K>(_if: (...argv: any[]) => K, ..._cases: CaseWrap<K>[]) {
   return function (_default?: CaseWrap<K>['handle']) {
     return function (...target: Parameters<typeof _if>) {
