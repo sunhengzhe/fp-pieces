@@ -2,9 +2,30 @@
 
 Some functional programming style's codes.
 
-### Compose
+## Array
 
-从右向左执行。
+### reverse
+
+Reverse string or array. Use **shallow copy**.
+
+```ts
+reverse('abc') // cba
+reverse(['a', 'b', 'c']) // ['c', 'b', 'a']
+
+// Warning
+const objs = [{ i: 0 }, { i: 1 }, { i: 2 }]
+const rObjs = reverse(objs)
+// rObjs will be affected
+objs[0].i = 3
+
+rObjs // [{ i: 2 }, { i: 1 }, { i: 3 }]
+```
+
+## Control flow
+
+### compose
+
+Run functions from right to left.
 
 ```ts
 const fn = compose(
@@ -16,9 +37,9 @@ const fn = compose(
 fn(1, 2) // result=6
 ```
 
-### Switch Case
+### _switch
 
-代替 `switch...case` 语句。
+Behavior similar to `switch...case`.
 
 ```ts
 const demo = _switch(
