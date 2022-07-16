@@ -29,6 +29,11 @@ export function compose<TArgs extends any[], R>(
   f1: (...args: TArgs) => R
 ): (...args: TArgs) => R
 
+/**
+ * Run functions from right to left
+ * @param fns
+ * @returns
+ */
 export function compose(...fns: any[]) {
   return (...args: any) => fns.reduceRight((prev, cur) => [cur.call(null, ...prev)], args)[0]
 }

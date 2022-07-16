@@ -31,7 +31,21 @@ Run functions from right to left.
 const fn = compose(
   (result) => `result=${result}`,
   (sum) => sum * 2,
-  (a: number, b: number) => a + b
+  (a: number, b: number) => a + b,
+)
+
+fn(1, 2) // result=6
+```
+
+### pipe
+
+In contrast to [compose](#compose), run functions from left to right.
+
+```ts
+const fn = pipe(
+  (a: number, b: number) => a + b,
+  (sum) => sum * 2,
+  (result) => `result=${result}`,
 )
 
 fn(1, 2) // result=6
