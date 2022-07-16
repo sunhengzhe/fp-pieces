@@ -2,6 +2,20 @@
 
 Some functional programming style's codes.
 
+### Compose
+
+从右向左执行。
+
+```ts
+const fn = compose(
+  (result) => `result=${result}`,
+  (sum) => sum * 2,
+  (a: number, b: number) => a + b
+)
+
+fn(1, 2) // result=6
+```
+
 ### Switch Case
 
 代替 `switch...case` 语句。
