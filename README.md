@@ -2,6 +2,20 @@
 
 Some functional programming style's codes.
 
+## Math
+
+### sum
+
+`[Number] -> Number`
+
+### add
+
+`Number -> Number -> Number`
+
+### subtract
+
+`Number -> Number -> Number`
+
 ## Array
 
 ### reverse
